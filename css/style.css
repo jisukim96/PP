@@ -1,0 +1,22 @@
+:root{
+    --text-color:#f1f1f1;
+    --background-color:#1a1a1a;
+    }
+
+body{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);}
+.navbar {
+    display: flex;
+    justify-content: right;
+    background-color: var(--background-color);
+    padding: 8px 12px;
+}
+.navbar_login li{
+    
+    list-style-type: none;
+}
