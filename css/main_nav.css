@@ -1,6 +1,6 @@
 :root{
-    --text-color:#f1f1f1;
-    --background-color:#1a1a1a;
+    --white-color:#f1f1f1;
+    --black-color:#1a1a1a;
     }
 
 body{
@@ -9,14 +9,15 @@ body{
 }
 a{
     text-decoration: none;
-    color: var(--text-color);}
+    color: var(--white-color);}
 .navbar {
     display: flex;
     justify-content: right;
-    background-color: var(--background-color);
+    background-color: var(--black-color);
     padding: 8px 12px;
 }
 .navbar_login li{
     
     list-style-type: none;
 }
+
