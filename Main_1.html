@@ -1,43 +1,325 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main_nav.css">
     <link rel="stylesheet" href="css/main_section.css">
+    <link rel="stylesheet" href="css/main_section_o.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padyakke+Expanded+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c1b69d0d69.js" crossorigin="anonymous"></script>
     <title>mainpage</title>
 </head>
+
 <body>
     <nav class="navbar">
         <ul class="navbar_login">
-            <li class="login"><a href="#"><h3>LOGIN</h3></a></li>
+            <li class="login"><a href="#">login</a></li>
             <li class="category"><i class="fa-duotone fa-rectangles-mixed"></i></li>
         </ul>
     </nav>
     <main>
         <section class="sec1">
             <div class="logobox">
-                <img class="main_logo" src="img/왓넷로고.png">
+                <h1 class="main_logo">whats the next</h1>
             </div>
-        <div class="main_seachbar">
-            <input type="search" placeholder="찾고있는 컨텐츠가 있으신가요?">
-            <i class="fa-sharp fa-solid fa-folder-tree"></i>
-            <img src="img/icons8-enter-key-50.png" class= "enter-icon" style="height: 20px;">
-        </div>
-        <section class="sec2">
+            <div class="main_seachbar">
+                <input type="search" placeholder="찾고있는 컨텐츠가 있으신가요?">
+                <i class="fa-sharp fa-solid fa-folder-tree"></i>
+                <img src="img/icons8-enter-key-50.png" class="enter-icon" style="height: 20px;">
+            </div>
+            <!-- style display:none -> 카테고리 버튼 onclick 후 display : block -->
+            <!-- 카테고리 창 사이즈 조절 및 리스트 정리-->
+            <div class="popup-back" style="display: block;">
+                <section class="popup all-category-list-layer">
+                    <h1 tabindex="1" class="popup-title">전체 카테고리 팝업</h1>
+                    <div class="popup-button-close"><button type="button">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAP9JREFUSA3tlUsKwjAQhou3cyWuu2t3vYDgAXovPUi7EbyDCvULdEoZzYsmG83AT/qYf75kQkhVlSgd+JsOTNN0QFdUxy4azx5dUBvrrTAZqEQXWgDDET1m4xjqW/Iw1rNZBi+cxDXU+E5LwZgHjJ1xr8IKJ0dD+xjWRy4FvfDkUJmFC54N6oJnhzrgT+AS2/ZUILYRit5zA46G7mwAx/c7/17q/029p31lZfrImNVKWI/apllQXUN7vum2p4V/g8oqssFd0GzwEGhyOFBztcktw6P/yJCj97yRiQWPFDH3qUTwOcWwhg/BQEmkQItGFH214WnQgM5Sr4ylA7/fgTe/2zTk30iqjgAAAABJRU5ErkJggg=="
+                                alt="팝업 닫기">
+                        </button>
+                    </div><!-- 카테고리 -->
+                    <div class="all-category-list-wrap">
+                        <h2 tabindex="0">전체 카테고리</h2>
+                        <div>
+                            <ul class="all-category-list column-5">
+                                <li thumbnail-info="[object Object]">
+                                    <h3 class="category-title">
+                                        <strong style="font-weight: 700;">방송</strong>
+                                    </h3>
+                                    <ul class="genre-list">
+                                        <li class="emphasis">
+                                            <a href="#" data-gnb="category-menu">
+                                                <div class="cell-title">
+                                                    <span class="title1 line1">CLASSIC</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title">
+                                                    <span class="title1 line1">인기 드라마</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title">
+                                                    <span class="title1 line1">인기 예능</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" data-gnb="category-menu">
+                                                <div class="cell-title">
+                                                    <span class="title1 line1">애니메이션</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">스포츠</span>
+                                                </div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">시사교양</span>
+                                                </div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title">
+                                                    <span class="title1 line1">크리에이터</span>
+                                                </div>
+                                            </a></li>
+                                    </ul>
+                                </li>
+                                <li thumbnail-info="[object Object]">
+                                    <h3 class="category-title"><strong style="font-weight: 700;">해외시리즈</strong></h3>
+                                    <ul class="genre-list">
+                                        <li class="emphasis"><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">업데이트</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">독점</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title">
+                                                    <span class="title1 line1">미드</span>
+                                                </div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">중드</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title">
+                                                    <span class="title1 line1">일드</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">영드</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">대드</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">다큐</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">엔터테인먼트</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">SF/판타지</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">로맨스</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">범죄</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">수사</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">액션</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">성장</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">사극</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">시대극</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">현대극</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">메디컬</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">코미디</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">미스터리</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">기타</span></div>
+                                            </a></li>
+                                    </ul>
+                                </li>
+                                <li thumbnail-info="[object Object]">
+                                    <h3 class="category-title"><strong style="font-weight: 700;">영화</strong></h3>
+                                    <ul class="genre-list">
+                                        <li class="emphasis"><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">업데이트</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">드라마</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">로맨스</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">코미디</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">액션</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">SF/판타지</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">모험</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">범죄</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">공포</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">음악</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">애니메이션</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">다큐멘터리</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">전쟁/재난</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">가족</span></div>
+                                            </a></li>
+                                    </ul>
+                                </li>
+                                <li thumbnail-info="[object Object]">
+                                    <h3 class="category-title"><strong style="font-weight: 700;">영화플러스</strong></h3>
+                                    <ul class="genre-list">
+                                        <li class="emphasis"><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">인기</span></div>
+                                            </a></li>
+                                        <li class="emphasis"><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">이벤트/할인</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">드라마</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">로맨스</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">코미디</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">액션</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">SF/판타지</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">모험</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">범죄</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">공포</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">애니메이션</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">다큐멘터리</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">전쟁/재난</span></div>
+                                            </a></li>
+                                        <li class=""><a href="#" data-gnb="category-menu">
+                                                <div class="cell-title"><span class="title1 line1">가족</span></div>
+                                            </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
 
-        </section>
-        <section class="sec3">
+            </div>
+            <!-- 작품이미지 링크복사 스크롤기능 구현-->
+            <section class="sec2">
+                <div class="update">금주 업데이트 작품</div>
+                <img src="https://img.wavve.com/BMS/TVProgram/2023/PRG_S01_P463606002-Vertical_LogoY_w720_h1080_q75.jpg"
+                    class="pic1" style="width: 240px; height: 360px; border-radius: 15px;">
+                <img src="https://img.wavve.com/BMS/TVProgram/2023/PRG_S01_P463606002-Vertical_LogoY_w720_h1080_q75.jpg"
+                    class="pic2" style="width: 240px; height: 360px; border-radius: 15px;">
+                <img src="https://img.wavve.com/BMS/TVProgram/2023/PRG_S01_P463606002-Vertical_LogoY_w720_h1080_q75.jpg"
+                    class="pic3" style="width: 240px; height: 360px; border-radius: 15px;">
+                <img src="https://img.wavve.com/BMS/TVProgram/2023/PRG_S01_P463606002-Vertical_LogoY_w720_h1080_q75.jpg"
+                    class="pic4" style="width: 240px; height: 360px; border-radius: 15px;">
+            </section>
+            <section class="sec3">
+                <div class="popu">NETFLIX 인기작품</div>
+                <img src="https://img.wavve.com/BMS/TVProgram/2023/PRG_S01_P463606002-Vertical_LogoY_w720_h1080_q75.jpg"
+                    class="pic1" style="width: 240px; height: 360px; border-radius: 15px;">
+                <img src="https://img.wavve.com/BMS/TVProgram/2023/PRG_S01_P463606002-Vertical_LogoY_w720_h1080_q75.jpg"
+                    class="pic2" style="width: 240px; height: 360px; border-radius: 15px;">
+                <img src="https://img.wavve.com/BMS/TVProgram/2023/PRG_S01_P463606002-Vertical_LogoY_w720_h1080_q75.jpg"
+                    class="pic3" style="width: 240px; height: 360px; border-radius: 15px;">
+                <img src="https://img.wavve.com/BMS/TVProgram/2023/PRG_S01_P463606002-Vertical_LogoY_w720_h1080_q75.jpg"
+                    class="pic4" style="width: 240px; height: 360px; border-radius: 15px;">
+            </section>
+            <section class="sec4">
+                <div class="popu">WAVVE 인기작품</div>
+                <img src="https://img.wavve.com/BMS/TVProgram/2022/PRG_M_1002831100000100000-Vertical_LogoY-RE_w720_h1080_q75.jpg"
+                    class="pic1" style="width: 240px; height: 360px; border-radius: 15px;">
+                <img src="https://img.wavve.com/BMS/TVProgram/2022/PRG_M_1004711100000100000-Vertical_LogoY-RE-RE_w720_h1080_q75.jpg"
+                    class="pic2" style="width: 240px; height: 360px; border-radius: 15px;">
+                <div aria-hidden="true" class="rank-area"><img
+                        src="data:image/png;base64,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"
+                        alt="랭킹 2위"></div>
 
-        </section>
-        <section class="sec4">
-
-        </section>
-        <section class="sec5">
-
-        </section>
+                <img src="https://img.wavve.com/BMS/TVProgram/2023/PRG_S01_P463606002-Vertical_LogoY_w720_h1080_q75.jpg"
+                    class="pic3" style="width: 240px; height: 360px; border-radius: 15px;">
+                <img src="https://img.wavve.com/BMS/TVProgram/2023/PRG_S01_P463606002-Vertical_LogoY_w720_h1080_q75.jpg"
+                    class="pic4" style="width: 240px; height: 360px; border-radius: 15px;">
+            </section>
+            <section class="sec5">
+                <div class="popu">TVING 인기작품</div>
+                <img src="https://img.wavve.com/BMS/TVProgram/2023/PRG_S01_P463606002-Vertical_LogoY_w720_h1080_q75.jpg"
+                    class="pic1" style="width: 240px; height: 360px; border-radius: 15px;">
+                <img src="https://img.wavve.com/BMS/TVProgram/2023/PRG_S01_P463606002-Vertical_LogoY_w720_h1080_q75.jpg"
+                    class="pic2" style="width: 240px; height: 360px; border-radius: 15px;">
+                <img src="https://img.wavve.com/BMS/TVProgram/2023/PRG_S01_P463606002-Vertical_LogoY_w720_h1080_q75.jpg"
+                    class="pic3" style="width: 240px; height: 360px; border-radius: 15px;">
+                <img src="https://img.wavve.com/BMS/TVProgram/2023/PRG_S01_P463606002-Vertical_LogoY_w720_h1080_q75.jpg"
+                    class="pic4" style="width: 240px; height: 360px; border-radius: 15px;">
+            </section>
     </main>
 </body>
+
 </html>
