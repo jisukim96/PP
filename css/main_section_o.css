@@ -14,15 +14,8 @@ body{margin: 0 auto;
 .pic1, .pic2 , .pic3, .pic4{
     margin: 20px;
 }
-.rank-area{
-position: absolute;
-right: 0;
-bottom: -32px;
-left: 0;
-z-index: 2;
-height: 76px;
-text-align: left;
-transform: translateZ(0);
-z-index: 20;}
+
+
+
 
 
