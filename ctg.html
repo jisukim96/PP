@@ -4,42 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>라이트 박스</title>
-    <style>
-        .row{
-            width: 420px;
-            margin: 0 auto;     /*중앙정렬*/
-        }
-        .row ul {   /*자손 */
-            list-style-type: none;
-            margin: 0; padding:0;
-        }
-        .row li {
-            display: inline-table;
-        }
-
-        #lightbox {
-            position: fixed;        /*위치 고정 : 스크롤과 상관없이 위치 고정   */
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.7);  /*배경색 지정*/
-
-            /*position이 fixed일때 absolute를 기준점으로 설정됨*/
-            top: 0;
-            left: 0;     /*    
-            display: none;  화면에서 사라짐 */
-        }
-        #lightbox img{
-            position: absolute; /*왼쪽 최상단이 기준점*/
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);        /* 정중앙에 위치하도록 설정 */
-            border: 5px solid #eee;
-        }
-
-    </style>
+    <title>Document</title>
 </head>
 <body>
+    
     <div class="row">
         <ul>
             <li><img src="img/icons8-hierarchy-50.png" style="height: 20px; width: 20px;" data-src="#lightboxImage" class="pic"></li>
@@ -66,7 +34,10 @@
             const lightbox = document.querySelector('#lightboxImage');
             lightbox.innerHTML = `<div style="background-color:black;">나와라</div> `;
         });
-    
+        pic.addEventListener("click", function(e){
+            const lightbox = document.querySelector('#lightboxImage');
+            lightbox.innerHTML = `<div style="background-color:black;">나와라</div> `;
+        });
 
         // //출력된 화면을 클릭시 다시 원래대로 되돌리는 함수
         // lightbox.onclick = function(){
