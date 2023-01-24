@@ -24,7 +24,6 @@ a{  text-decoration: none;
     width: 100%;
 }
 .login{
-    font-family: 'Dosis', sans-serif;
     color: #f1f1f1;}
 
 .main_logo{  
@@ -67,7 +66,9 @@ a{  text-decoration: none;
 input[type=checkbox] { 
     display:none; 
 }
-#popup-img{
+
+/**/
+.popup{
     position: absolute;
     padding: 10px;
     width: 20px;
